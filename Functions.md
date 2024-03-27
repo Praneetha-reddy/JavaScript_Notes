@@ -11,5 +11,10 @@ Callback functions are a fundamental concept in javascript which allow to pass a
      **b. When an event occurs and triggers the call back function.**
 
 _**Example Code**_
+```javascript
+console.log("Hello");
+let a = 5;
+document.querySelector(".code").addEventListener("click", greet);
+```
 
 
