@@ -106,6 +106,40 @@ object_name: the object which **this** keyword should refer inside the method.
 The usage of apply method can be replaced with call method by using spread operator.
 
 ### Bind method
+It returns a new function, allowing you to pass any number of arguments.
+
+**Syntax:**
+
+bind(thisArg)
+
+bind(thisArg, arg1)
+
+bind(thisArg, arg1, arg2)
+
+bind(thisArg, arg1, arg2, /* …, */ argN)
+
+_**Example code:**_
+```javascript
+//Creating two different objects.
+const book1 = {
+   Name: 'The power of five',
+   Author: 'Anthony Horowitz'
+}
+const book2 = {
+   Name: 'The Monk who sold his Ferrari',
+   Author: 'Robin Sharma'
+}
+const bookDetails = function(){
+   console.log(`The book ${this.Name} was written by ${this.Author}`)
+}
+
+const detailsBook1 = bookDetails.bind(book1); 
+const detailsBook2 = bookDetails.bind(book2); 
+detailsBook1();  // this keyword inside the function always points to the book1 object.
+detailsBook2();  // this keyword inside the function always points to the book2 object.
+```
+ 
+
 
 
 
